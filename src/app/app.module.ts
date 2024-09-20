@@ -12,6 +12,7 @@ import { ErrorpageComponent } from './errorpage/errorpage.component';
 import { FormsModule } from '@angular/forms';
 import { provideHttpClient } from '@angular/common/http';
 import { SearchPipe } from './search.pipe';
+import { SortPipe } from './sort.pipe';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { SearchPipe } from './search.pipe';
     FoodsComponent,
     ErrorpageComponent,
     SearchPipe,
+    SortPipe,
   ],
   imports: [
     BrowserModule,

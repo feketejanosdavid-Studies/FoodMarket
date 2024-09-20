@@ -20,7 +20,7 @@
           </li>
         </ul>
         <form class="d-flex" role="search">
-          <input [(ngModel)]="keresoSzo" class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="Search">
+          <input (keyup)="onKeyup($event)" [(ngModel)]="keresoSzo" class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="Search">
           <button (click)="setKeresoSzo()" class="btn btn-outline-success" type="submit">Search</button>
         </form>
       </div>

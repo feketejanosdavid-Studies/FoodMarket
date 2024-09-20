@@ -18,4 +18,8 @@ export class NavbarComponent {
   setKeresoSzo(){
     this.searchServ.setSearchWord(this.keresoSzo)
   }
+
+  onKeyup(event:any){
+    this.searchServ.setSearchWord(event.target.value)
+  }
 }

@@ -12,6 +12,8 @@ export class FoodsComponent {
 
   foods:any=[]
   keresoSzo=""
+  rendezesTomb=["Alapértelmezett","Olcsók elől","Drágák elől"]
+  rendezesAllapot=0
 
   constructor(private base:BaseService, private search:SearchService){
     this.base.getFoods().subscribe(
@@ -23,8 +25,11 @@ export class FoodsComponent {
     )
   }
 
+  onKeyUp(event:any) {
+    this.search.setSearchWord(event.target.value)
+  }
 
-  setSearch(szo:string) {
-    this.keresoSzo = szo
+  RendezesIranyValt() {
+    this.rendezesAllapot = (this.rendezesAllapot==2?0:++this.rendezesAllapot)
   }
 }
