@@ -9,7 +9,9 @@ export class SortPipe implements PipeTransform {
     if (!foods) return null;
     if (irany==0) return foods
     return foods.sort(
-      (a,b)=>Number(a.ar)-Number(b.ar)
+      (a,b)=> {
+        let x = Number(a.ar)-Number(b.ar)
+        return irany ==1?x:-x } 
     )
   }
 
