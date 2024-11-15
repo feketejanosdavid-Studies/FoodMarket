@@ -17,13 +17,18 @@
     </div>
 </div>
 
-<div *ngFor="let food of (foods|search:keresoSzo)|sort:rendezesAllapot" class="row gap mt-3">
-    <div *ngFor="let food of foods|search:keresoSzo" class="card" style="width: 18rem;">
+<div  class="row gap mt-3">
+<!-- <div *ngFor="let food of (foods|search:keresoSzo)|sort:rendezesAllapot" class="row gap mt-3"> -->
+    <div *ngFor="let food of foods|search:keresoSzo|sort:rendezesAllapot" class="card" style="width: 18rem;">
         <img class="card-img-top" [src]="food.kep" alt="Ételkép">
         <div class="card-body">
-          <h5 class="card-title">Élelmiszer</h5>
-          <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, itaque perferendis. Esse ipsa ipsam nesciunt quasi nemo, minima explicabo.</p>
-          <p class="card-text">{{food.ar}}/{{food.mennyiseg}}</p>
+          <h5 class="card-title">{{food.nev}}</h5>
+          <p class="card-text">{{food.leiras}}</p>
+          
+          <p class="card-text">{{food.ar}}/{{food.mennyiseg}}
+            <input #db value="1" type="number" class="form-control form mt-2">
+            <button (click)="addTetel(food, db.value)" class="btn btn-outline-success mt-2"><i  class="bi bi-basket"></i> Kosárba</button>
+          </p>
         </div>
       </div>
 </div>

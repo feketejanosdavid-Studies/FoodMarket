@@ -1,0 +1,16 @@
+app-foods{
+    width: 80%;
+    float: left;
+}
+app-cart{
+    float: right;
+    width: 550px;
+    padding: 0;
+    margin: 0;
+    background-color: lightslategrey;
+    padding: 5px;
+    position: fixed ;
+    color: white;
+    height: 300px;
+    overflow-y: scroll;
+}

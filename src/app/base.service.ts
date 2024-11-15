@@ -5,11 +5,11 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class BaseService {
-  private url="http://localhost:3000/products/"
+  private databaseURL ="https://foodshopfjd-default-rtdb.europe-west1.firebasedatabase.app/Termekek.json"
 
   constructor(private http:HttpClient) { }
 
   getFoods() {
-    return this.http.get(this.url)
+    return this.http.get(this.databaseURL)
   }
 }
